@@ -1,0 +1,1343 @@
+public class kayit {
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		birkisilikoda oda1 = new birkisilikoda();
+		ikikisilikoda oda2 = new ikikisilikoda();
+		uckisilikoda oda3 = new uckisilikoda();
+		dortkisilikoda oda4 = new dortkisilikoda();
+		beskisilikoda oda5 = new beskisilikoda();
+		altikisilikoda oda6 = new altikisilikoda();
+
+		for (int m = 0; m < 105; m++) {
+
+			System.out.println("bir kisilik 1500");
+			System.out.println("iki kisilik 1400");
+			System.out.println("uc kisilik 1300");
+			System.out.println("dort kisilik 1200");
+			System.out.println("bes kisilik 1100");
+			System.out.println("alti kisilik 1000");
+			System.out.println("kac kisilik odaya gecmek istersiniz");
+			int kackisilik = scan.nextInt();
+
+			if (kackisilik == 1) {
+				oda1.odadoluluk();
+				if (oda1.kackisilik1 > 1) {
+					kackisilik = oda1.kackisilik1;
+				}
+			}
+			if (kackisilik == 2) {
+				oda2.odadoluluk();
+				if (oda2.kackisilik2 > 2 || oda2.kackisilik2 < 2) {
+					kackisilik = oda2.kackisilik2;
+					oda2.kackisilik2 = 2;
+
+				}
+			}
+			if (kackisilik == 3) {
+				oda3.odadoluluk();
+				if (oda3.kackisilik3 > 3 || oda3.kackisilik3 < 3) {
+					kackisilik = oda3.kackisilik3;
+					oda3.kackisilik3 = 3;
+				}
+			}
+			if (kackisilik == 4) {
+				oda4.odadoluluk();
+				if (oda4.kackisilik4 > 1 || oda4.kackisilik4 < 4) {
+					kackisilik = oda4.kackisilik4;
+					oda4.kackisilik4 = 4;
+				}
+			}
+			if (kackisilik == 5) {
+				oda5.odadoluluk();
+				if (oda5.kackisilik5 > 5 || oda5.kackisilik5 < 5) {
+					kackisilik = oda5.kackisilik5;
+					oda5.kackisilik5 = 5;
+				}
+			}
+			if (kackisilik == 6) {
+				oda6.odadoluluk();
+				if (oda6.kackisilik6 < 6) {
+					kackisilik = oda6.kackisilik6;
+					oda6.kackisilik6 = 6;
+				}
+			}
+			if (kackisilik == 1) {
+				System.out.println("bilgilerinizi giriniz");
+				System.out.println("adinizi giriniz");
+				String ogrenciadi = scan.next();
+				oda1.setOgrenciadi(ogrenciadi);
+				System.out.println("ogrenci soyadi");
+				String ogrencisoyadi = scan.next();
+				oda1.setOgrencisoyad(ogrencisoyadi);
+				System.out.println("kac ay kalacaksiniz ");
+				int Kacay = scan.nextInt();
+				oda1.setKacay(Kacay);
+				System.out.println("yemek durumunuzu belirleyin yemekli veya yemeksiz");
+				System.out.println("yemekli ise 600 tl daha eklenir");
+				System.out.println("yemeksiz ise 1 yemekli ise 2 ");
+				int yemekdrm = scan.nextInt();
+				for (int i = 0; i < 1;) {
+					if (yemekdrm == 1 || yemekdrm == 2) {
+						i++;
+					} else {
+						System.out.println(" yanlis rakam girdiniz 1 veya 2 giriniz");
+						int yemekdrm1 = scan.nextInt();
+						yemekdrm = yemekdrm1;
+					}
+				}
+				oda1.setYemekdrm(yemekdrm);
+				oda1.odadoluluk();
+				System.out.println("oda numarinizi belirleyin boss olan odalardan birini seciniz ");
+				int odano = scan.nextInt();
+				oda1.odakayit(odano);
+
+				oda1.odabilgilerinigoster();
+			}
+			if (kackisilik == 2) {
+				System.out.println("bilgilerinizi giriniz");
+				System.out.println("adinizi giriniz");
+				String ogrenciadi = scan.next();
+				oda2.setOgrenciadi(ogrenciadi);
+				System.out.println("ogrenci soyadi");
+				String ogrencisoyadi = scan.next();
+				oda2.setOgrencisoyad(ogrencisoyadi);
+				System.out.println("kac ay kalacaksiniz ");
+				int Kacay = scan.nextInt();
+				oda2.setKacay(Kacay);
+				System.out.println("yemek durumunuzu belirleyin yemekli veya yemeksiz");
+				System.out.println("yemekli ise 600 tl daha eklenir");
+				System.out.println("yemeksiz ise 1 yemekli ise 2 ");
+				int yemekdrm = scan.nextInt();
+				for (int i = 0; i < 1;) {
+					if (yemekdrm == 1 || yemekdrm == 2) {
+						i++;
+					} else {
+						System.out.println(" yanlis rakam girdiniz 1 veya 2 giriniz");
+						int yemekdrm1 = scan.nextInt();
+						yemekdrm = yemekdrm1;
+					}
+				}
+				oda2.setYemekdrm(yemekdrm);
+				oda2.odadoluluk();
+				System.out.println("oda numarinizi belirleyin boss olan odalardan birini seciniz ");
+				int odano = scan.nextInt();
+				oda2.odakayit(odano);
+				oda2.odabilgilerinigoster();
+			}
+			if (kackisilik == 3) {
+				System.out.println("bilgilerinizi giriniz");
+				System.out.println("adinizi giriniz");
+				String ogrenciadi = scan.next();
+				oda3.setOgrenciadi(ogrenciadi);
+				System.out.println("ogrenci soyadi");
+				String ogrencisoyadi = scan.next();
+				oda3.setOgrencisoyad(ogrencisoyadi);
+				System.out.println("kac ay kalacaksiniz ");
+				int Kacay = scan.nextInt();
+				oda3.setKacay(Kacay);
+				System.out.println("yemek durumunuzu belirleyin yemekli veya yemeksiz");
+				System.out.println("yemekli ise 600 tl daha eklenir");
+				System.out.println("yemeksiz ise 1 yemekli ise 2");
+				int yemekdrm = scan.nextInt();
+				for (int i = 0; i < 1;) {
+					if (yemekdrm == 1 || yemekdrm == 2) {
+						i++;
+					} else {
+						System.out.println(" yanlis rakam girdiniz 1 veya 2 giriniz");
+						int yemekdrm1 = scan.nextInt();
+						yemekdrm = yemekdrm1;
+					}
+				}
+				oda3.setYemekdrm(yemekdrm);
+				oda3.odadoluluk();
+				System.out.println("oda numarinizi belirleyin boss olan odalardan birini seciniz ");
+				int odano = scan.nextInt();
+				oda3.odakayit(odano);
+				oda3.odabilgilerinigoster();
+			}
+			if (kackisilik == 4) {
+				System.out.println("bilgilerinizi giriniz");
+				System.out.println("adinizi giriniz");
+				String ogrenciadi = scan.next();
+				oda4.setOgrenciadi(ogrenciadi);
+				System.out.println("ogrenci soyadi");
+				String ogrencisoyadi = scan.next();
+				oda4.setOgrencisoyad(ogrencisoyadi);
+				System.out.println("kac ay kalacaksiniz ");
+				int Kacay = scan.nextInt();
+				oda4.setKacay(Kacay);
+				System.out.println("yemek durumunuzu belirleyin yemekli veya yemeksiz");
+				System.out.println("yemekli ise 600 tl daha eklenir");
+				System.out.println("yemekli ise 1 yemeksiz ise 2 ");
+				int yemekdrm = scan.nextInt();
+				for (int i = 0; i < 1;) {
+					if (yemekdrm == 1 || yemekdrm == 2) {
+						i++;
+					} else {
+						System.out.println(" yanlis rakam girdiniz 1 veya 2 giriniz");
+						int yemekdrm1 = scan.nextInt();
+						yemekdrm = yemekdrm1;
+					}
+				}
+				oda4.setYemekdrm(yemekdrm);
+				oda4.odadoluluk();
+				System.out.println("oda numarinizi belirleyin boss olan odalardan birini seciniz ");
+				int odano = scan.nextInt();
+				oda4.odakayit(odano);
+				oda4.odabilgilerinigoster();
+			}
+			if (kackisilik == 5) {
+				System.out.println("bilgilerinizi giriniz");
+				System.out.println("adinizi giriniz");
+				String ogrenciadi = scan.next();
+				oda5.setOgrenciadi(ogrenciadi);
+				System.out.println("ogrenci soyadi");
+				String ogrencisoyadi = scan.next();
+				oda5.setOgrencisoyad(ogrencisoyadi);
+				System.out.println("kac ay kalacaksiniz ");
+				int Kacay = scan.nextInt();
+				oda5.setKacay(Kacay);
+				System.out.println("yemek durumunuzu belirleyin yemekli veya yemeksiz");
+				System.out.println("yemekli ise 600 tl daha eklenir");
+				System.out.println("yemeksiz ise 1 yemekli ise 2 ");
+				int yemekdrm = scan.nextInt();
+				for (int i = 0; i < 1;) {
+					if (yemekdrm == 1 || yemekdrm == 2) {
+						i++;
+					} else {
+						System.out.println(" yanlis rakam girdiniz 1 veya 2 giriniz");
+						int yemekdrm1 = scan.nextInt();
+						yemekdrm = yemekdrm1;
+					}
+				}
+				oda5.setYemekdrm(yemekdrm);
+				oda5.odadoluluk();
+				System.out.println("oda numarinizi belirleyin boss olan odalardan birini seciniz ");
+				int odano = scan.nextInt();
+				oda5.odakayit(odano);
+				oda5.odabilgilerinigoster();
+			}
+			if (kackisilik == 6) {
+				System.out.println("bilgilerinizi giriniz");
+				System.out.println("adinizi giriniz");
+				String ogrenciadi = scan.next();
+				oda6.setOgrenciadi(ogrenciadi);
+				System.out.println("ogrenci soyadi");
+				String ogrencisoyadi = scan.next();
+				oda6.setOgrencisoyad(ogrencisoyadi);
+				System.out.println("kac ay kalacaksiniz ");
+				int Kacay = scan.nextInt();
+				oda6.setKacay(Kacay);
+				System.out.println("yemek durumunuzu belirleyin yemekli veya yemeksiz");
+				System.out.println("yemekli ise 600 tl daha eklenir");
+				System.out.println("yemeksiz ise 1 yemekli ise 2 ");
+				int yemekdrm = scan.nextInt();
+				for (int i = 0; i < 1;) {
+					if (yemekdrm == 1 || yemekdrm == 2) {
+						i++;
+					} else {
+						System.out.println(" yanlis rakam girdiniz 1 veya 2 giriniz");
+						int yemekdrm1 = scan.nextInt();
+						yemekdrm = yemekdrm1;
+					}
+				}
+				oda6.setYemekdrm(yemekdrm);
+				oda6.odadoluluk();
+				System.out.println("oda numarinizi belirleyin boss olan odalardan birini seciniz ");
+				int odano = scan.nextInt();
+				oda6.odakayit(odano);
+				oda6.odabilgilerinigoster();
+			}
+			if (kackisilik < 1 || kackisilik > 6) {
+				System.out.println("oda kapasiteleri 1 ve 6 arasindadir");
+				System.out.println("yeniden seciniz");
+				m--;
+			}
+
+		}
+
+	}
+
+}
+public interface odalar {
+
+	int yemekucreti(int yemekdrm);
+
+	int toplamuucretgoster();
+
+	void odadoluluk();
+
+	void odakayit(int odano);
+
+	void odabilgilerinigoster();
+	
+}
+import java.util.Scanner;
+
+public class ikikisilikoda implements odalar {
+
+	Scanner t = new Scanner(System.in);
+	private int yemekdrm;
+	static int kackisilik2=2;
+	private int Kacay;
+	private int odano;
+	private String ogrenciadi;
+	private String ogrencisoyad;
+	public static int odasayac[] = { 0, 0, 0, 0, 0 };
+
+	@Override
+	public int yemekucreti(int yemekdrm) {
+		switch (yemekdrm) {
+		case 1:
+			return 0;
+		case 2:
+			return 600;
+		default:
+			break;
+		}
+		return 0;
+
+	}
+
+	@Override
+	public int toplamuucretgoster() {
+		return (this.yemekucreti(this.yemekdrm) + 1400) * this.getKacay();
+	}
+
+	@Override
+	public void odabilgilerinigoster() {
+		System.out.println(" oda bilgileriniz =");
+		
+		System.out.println("ogrenci ad soyad" + " " + getOgrenciadi() + " " + getOgrencisoyad());
+		System.out.println("oda numaraniz=" + getOdano());
+		System.out.println("toplam ucret=" + toplamuucretgoster());
+		if(getYemekdrm()==2) {
+			System.out.println("yemekli durumu= yemekli" );	
+		}
+		else 
+		System.out.println("yemekli durumu = yemeksiz");
+		System.out.println("oda kapasitesi iki kisiliktir");
+
+	}
+
+	public int getYemekdrm() {
+		return yemekdrm;
+	}
+
+	public void setYemekdrm(int yemekdrm) {
+		if (yemekdrm == 1 || yemekdrm == 2) {
+			this.yemekdrm = yemekdrm;
+
+		}
+		if (yemekdrm > 2) {
+			System.out.println("yanlis rakam girdiniz 1 veya 2 olabilir");
+
+		}
+	}
+
+	public int getKacay() {
+		return Kacay;
+	}
+
+	public void setKacay(int kacay) {
+		this.Kacay = kacay;
+	}
+
+	public int getOdano() {
+		return odano;
+	}
+
+	public void setOdano(int odano) {
+		this.odano = odano;
+	}
+
+	public String getOgrenciadi() {
+		return ogrenciadi;
+	}
+
+	public void setOgrenciadi(String ogrenciadi) {
+		this.ogrenciadi = ogrenciadi;
+	}
+
+	public String getOgrencisoyad() {
+		return ogrencisoyad;
+	}
+
+	public void setOgrencisoyad(String ogrencisoyad) {
+		this.ogrencisoyad = ogrencisoyad;
+	}
+
+	@Override
+	public void odadoluluk() {
+
+		if (odasayac[0] >= 2) {
+			System.out.println("oda 6 dolmustur");
+		} else
+			System.out.println("oda 6 bostur");
+		if (odasayac[1] >= 2) {
+			System.out.println("oda 7 dolmustur");
+		} else {
+			System.out.println("oda  7 bostur");
+		}
+		if (odasayac[2] >= 2) {
+			System.out.println("oda 8 dolmustur");
+		} else {
+			System.out.println("oda  8 bostur");
+		}
+		if (odasayac[3] >= 2) {
+			System.out.println("oda 9 dolmustur");
+		} else {
+			System.out.println("oda  9 bostur");
+		}
+		if (odasayac[4] >= 2) {
+			System.out.println("oda 10 dolmustur");
+		} else {
+			System.out.println("oda  10 bostur");
+		}
+		if (odasayac[0] >= 2 && odasayac[1] >= 2 && odasayac[2] >= 2 && odasayac[3] >= 2 && odasayac[4] >= 2) {
+			System.out.println("iki kontejanlik tum odalar dolmustur baska kapasietli oda seciniz");
+		 kackisilik2=t.nextInt();	
+			
+		}
+	}
+
+	@Override
+	public void odakayit(int odano) {
+		if (odano == 6) {
+			if (odasayac[0] >= 2) {
+				System.out.println("bu oda kontejani doldurmus");
+				System.out.println("bos odalardan birini seciniz");
+				int a = t.nextInt();
+				odakayit(a);
+			}
+
+			else {
+				System.out.println(" iki kisilik  odaya kayit oldunuz");
+				odasayac[0]++;
+
+				setOdano(6);
+			}
+
+		}
+		if (odano == 7) {
+			if (odasayac[1] >= 2) {
+				System.out.println("bu oda kontejani doldurmus ");
+				System.out.println("bos odalardan birini seciniz");
+				int a = t.nextInt();
+				odakayit(a);
+			} else {
+				System.out.println("iki kisilik  odaya kayit oldunuz");
+				odasayac[1]++;
+				setOdano(7);
+
+			}
+
+		}
+
+		if (odano == 8) {
+			if (odasayac[2] >= 2) {
+				System.out.println("bu oda kontejani doldurmus ");
+				System.out.println("bos odalardan birini seciniz");
+				int a = t.nextInt();
+				odakayit(a);
+			} else {
+				System.out.println("iki kisilik  odaya kayit oldunuz");
+				odasayac[2]++;
+
+				setOdano(8);
+			}
+
+		}
+		if (odano == 9) {
+			if (odasayac[3] >= 2) {
+				System.out.println("bu oda kontejani doldurmus ");
+				System.out.println("bos odalardan birini seciniz");
+				int a = t.nextInt();
+				odakayit(a);
+			} else {
+				System.out.println("IKI kisilik odaya kayit oldunuz");
+				odasayac[3]++;
+
+				setOdano(9);
+			}
+
+		}
+		if (odano == 10) {
+			if (odasayac[4] >= 2) {
+				System.out.println("bu oda kontejani doldurmus ");
+				odadoluluk();
+				System.out.println("bos odalardan birini seciniz");
+				int a = t.nextInt();
+				odakayit(a);
+			} else {
+				System.out.println("iki kisilik odaya kayit oldunuz");
+				odasayac[4]++;
+				setOdano(10);
+			}
+
+		}
+		if (odano >= 11||odano<=6) {
+			System.out.println("IKI kisilikde boyle oda bulunmamaktadir");
+			System.out.println("tekrar oda seciniz");
+			int odasecimi = t.nextInt();
+			odakayit(odasecimi);
+
+		}
+
+	}
+
+}
+import java.util.Scanner;
+
+public class uckisilikoda implements odalar {
+
+	Scanner t = new Scanner(System.in);
+	static int kackisilik3=3;
+	private int yemekdrm;
+	private int Kacay;
+	private int odano;
+	private String ogrenciadi;
+	private String ogrencisoyad;
+	public static int odasayac[] = { 0, 0, 0, 0, 0 };
+
+	@Override
+	public int yemekucreti(int yemekdrm) {
+		switch (yemekdrm) {
+		case 1:
+			return 0;
+		case 2:
+			return 600;
+		default:
+			break;
+		}
+		return 0;
+
+	}
+
+	@Override
+	public int toplamuucretgoster() {
+		return (this.yemekucreti(this.yemekdrm) + 1300) * this.getKacay();
+	}
+
+	@Override
+	public void odabilgilerinigoster() {
+		System.out.println(" oda bilgileriniz =");
+		
+		System.out.println("ogrenci ad soyad" + " " + getOgrenciadi() + " " + getOgrencisoyad());
+		System.out.println("oda numaraniz=" + getOdano());
+		System.out.println("toplam ucret=" + toplamuucretgoster());
+		if(getYemekdrm()==2) {
+			System.out.println("yemekli durumu= yemekli" );	
+		}
+		else 
+		System.out.println("yemekli durumu = yemeksiz");
+		System.out.println("oda kapasitesi uc kisilik");
+
+	}
+
+	public int getYemekdrm() {
+		return yemekdrm;
+	}
+
+	public void setYemekdrm(int yemekdrm) {
+		if (yemekdrm == 1 || yemekdrm == 2) {
+			this.yemekdrm = yemekdrm;
+
+		}
+		if (yemekdrm > 2) {
+			System.out.println("yanlis rakam girdiniz 1 veya 2 olabilir");
+
+		}
+	}
+
+	public int getKacay() {
+		return Kacay;
+	}
+
+	public void setKacay(int kacay) {
+		this.Kacay = kacay;
+	}
+
+	public int getOdano() {
+		return odano;
+	}
+
+	public void setOdano(int odano) {
+		this.odano = odano;
+	}
+
+	public String getOgrenciadi() {
+		return ogrenciadi;
+	}
+
+	public void setOgrenciadi(String ogrenciadi) {
+		this.ogrenciadi = ogrenciadi;
+	}
+
+	public String getOgrencisoyad() {
+		return ogrencisoyad;
+	}
+
+	public void setOgrencisoyad(String ogrencisoyad) {
+		this.ogrencisoyad = ogrencisoyad;
+	}
+
+	@Override
+	public void odadoluluk() {
+
+		if (odasayac[0] >= 3) {
+			System.out.println("oda 11 dolmustur");
+		} else
+			System.out.println("oda 11 bostur");
+		if (odasayac[1] >= 3) {
+			System.out.println("oda 12 dolmustur");
+		} else {
+			System.out.println("oda  12 bostur");
+		}
+		if (odasayac[2] >= 3) {
+			System.out.println("oda 13 dolmustur");
+		} else {
+			System.out.println("oda  13 bostur");
+		}
+		if (odasayac[3] >= 3) {
+			System.out.println("oda 14 dolmustur");
+		} else {
+			System.out.println("oda  14 bostur");
+		}
+		if (odasayac[4] >= 3) {
+			System.out.println("oda 15 dolmustur");
+		} else {
+			System.out.println("oda  15 bostur");
+		}
+		if (odasayac[0] >= 3 && odasayac[1] >= 3 && odasayac[2] >= 3 && odasayac[3] >= 3 && odasayac[4] >= 3) {
+			System.out.println(" uc kisilik kontejanli tum odalar dolmustur baska kapasietli oda seciniz");
+		 kackisilik3=t.nextInt();	
+		}
+	}
+
+	@Override
+	public void odakayit(int odano) {
+		if (odano == 11) {
+			if (odasayac[0] >= 3) {
+				System.out.println("bu oda kontejani doldurmus");
+				System.out.println("bos odalardan birini seciniz");
+				int a = t.nextInt();
+				odakayit(a);
+			}
+
+			else {
+				System.out.println(" bir kisilik odaya kayit oldunuz");
+				odasayac[0]++;
+
+				setOdano(11);
+			}
+
+		}
+		if (odano == 12) {
+			if (odasayac[1] >= 3) {
+				System.out.println("bu oda kontejani doldurmus ");
+				System.out.println("bos odalardan birini seciniz");
+				int a = t.nextInt();
+				odakayit(a);
+			} else {
+				System.out.println("uc kisilik odaya kayit oldunuz");
+				odasayac[1]++;
+
+				setOdano(12);
+
+			}
+
+		}
+
+		if (odano == 13) {
+			if (odasayac[2] >= 3) {
+				System.out.println("bu oda kontejani doldurmus ");
+				System.out.println("bos odalardan birini seciniz");
+				int a = t.nextInt();
+				odakayit(a);
+			} else {
+				System.out.println("uc kisilik odaya kayit oldunuz");
+				odasayac[2]++;
+
+				setOdano(13);
+			}
+
+		}
+		if (odano == 14) {
+			if (odasayac[3] >= 3) {
+				System.out.println("bu oda kontejani doldurmus ");
+				System.out.println("bos odalardan birini seciniz");
+				int a = t.nextInt();
+				odakayit(a);
+			} else {
+				System.out.println("uc kisilik odaya kayit oldunuz");
+				odasayac[3]++;
+
+				setOdano(14);
+			}
+
+		}
+		if (odano == 15) {
+			if (odasayac[4] >= 3) {
+				System.out.println("bu oda kontejani doldurmus ");
+				odadoluluk();
+				System.out.println("bos odalardan birini seciniz");
+				int a = t.nextInt();
+				odakayit(a);
+			} else {
+				System.out.println("uc kisilik odaya kayit oldunuz");
+				odasayac[4]++;
+				setOdano(15);
+			}
+
+		}if(odano>=16||odano<=11) {
+			System.out.println("uc kisilikde boyle oda bulunmamaktadir");
+			System.out.println("tekrar oda seciniz");
+			int odasecimi=t.nextInt();
+			odakayit(odasecimi);
+				
+				
+			}
+
+	}
+
+}import java.util.Scanner;
+
+public class dortkisilikoda implements odalar {
+
+	Scanner t = new Scanner(System.in);
+	private int yemekdrm;
+	static int kackisilik4=4;
+	private int Kacay;
+	private int odano;
+	private String ogrenciadi;
+	private String ogrencisoyad;
+	public static int odasayac[] = { 0, 0, 0, 0, 0 };
+
+	@Override
+	public int yemekucreti(int yemekdrm) {
+		switch (yemekdrm) {
+		case 1:
+			return 0;
+		case 2:
+			return 600;
+		default:
+			break;
+		}
+		return 0;
+
+	}
+
+	@Override
+	public int toplamuucretgoster() {
+		return (this.yemekucreti(this.yemekdrm) + 1200) * this.getKacay();
+	}
+
+	@Override
+	public void odabilgilerinigoster() {
+		System.out.println(" oda bilgileriniz =");
+		
+		System.out.println("ogrenci ad soyad" + " " + getOgrenciadi() + " " + getOgrencisoyad());
+		System.out.println("oda numaraniz=" + getOdano());
+		System.out.println("toplam ucret=" + toplamuucretgoster());
+		if(getYemekdrm()==2) {
+			System.out.println("yemekli durumu= yemekli" );	
+		}
+		else 
+		System.out.println("yemekli durumu = yemeksiz");
+		System.out.println("oda kapasitesi dort kisilik");
+
+	}
+
+	public int getYemekdrm() {
+		return yemekdrm;
+	}
+
+	public void setYemekdrm(int yemekdrm) {
+		if (yemekdrm == 1 || yemekdrm == 2) {
+			this.yemekdrm = yemekdrm;
+
+		}
+		if (yemekdrm > 2) {
+			System.out.println("yanlis rakam girdiniz 1 veya 2 olabilir");
+
+		}
+	}
+
+	public int getKacay() {
+		return Kacay;
+	}
+
+	public void setKacay(int kacay) {
+		this.Kacay = kacay;
+	}
+
+	public int getOdano() {
+		return odano;
+	}
+
+	public void setOdano(int odano) {
+		this.odano = odano;
+	}
+
+	public String getOgrenciadi() {
+		return ogrenciadi;
+	}
+
+	public void setOgrenciadi(String ogrenciadi) {
+		this.ogrenciadi = ogrenciadi;
+	}
+
+	public String getOgrencisoyad() {
+		return ogrencisoyad;
+	}
+
+	public void setOgrencisoyad(String ogrencisoyad) {
+		this.ogrencisoyad = ogrencisoyad;
+	}
+
+	@Override
+	public void odadoluluk() {
+
+		if (odasayac[0] >= 4) {
+			System.out.println("oda 16 dolmustur");
+		} else
+			System.out.println("oda 16 bostur");
+		if (odasayac[1] >= 4) {
+			System.out.println("oda 17 dolmustur");
+		} else {
+			System.out.println("oda  17 bostur");
+		}
+		if (odasayac[2] >= 4) {
+			System.out.println("oda 18 dolmustur");
+		} else {
+			System.out.println("oda  18 bostur");
+		}
+		if (odasayac[3] >= 4) {
+			System.out.println("oda 19 dolmustur");
+		} else {
+			System.out.println("oda  19 bostur");
+		}
+		if (odasayac[4] >= 4) {
+			System.out.println("oda 20 dolmustur");
+		} else {
+			System.out.println("oda  20 bostur");
+		}
+		if (odasayac[0] >= 4 && odasayac[1] >= 4 && odasayac[2] >= 4 && odasayac[3] >= 4 && odasayac[4] >= 4) {
+			System.out.println("dort kontejanli tum odalar dolmustur baska kapasietli oda seciniz");
+			 kackisilik4=t.nextInt();	
+		}
+	}
+
+	@Override
+	public void odakayit(int odano) {
+		if (odano == 16) {
+			if (odasayac[0] >= 4) {
+				System.out.println("bu oda kontejani doldurmus");
+				System.out.println("bos odalardan birini seciniz");
+				int a = t.nextInt();
+				odakayit(a);
+			}
+
+			else {
+				System.out.println(" dort kisilik odaya kayit oldunuz");
+				odasayac[0]++;
+
+				setOdano(16);
+			}
+
+		}
+		if (odano == 17) {
+			if (odasayac[1] >= 4) {
+				System.out.println("bu oda kontejani doldurmus ");
+				System.out.println("bos odalardan birini seciniz");
+				int a = t.nextInt();
+				odakayit(a);
+			} else {
+				System.out.println("dort kisilik odaya kayit oldunuz");
+				odasayac[1]++;
+
+				setOdano(17);
+
+			}
+
+		}
+
+		if (odano == 18) {
+			if (odasayac[2] >= 4) {
+				System.out.println("bu oda kontejani doldurmus ");
+				System.out.println("bos odalardan birini seciniz");
+				int a = t.nextInt();
+				odakayit(a);
+			} else {
+				System.out.println("dort kisilik odaya kayit oldunuz");
+				odasayac[2]++;
+
+				setOdano(18);
+			}
+
+		}
+		if (odano == 19) {
+			if (odasayac[3] >= 4) {
+				System.out.println("bu oda kontejani doldurmus ");
+				System.out.println("bos odalardan birini seciniz");
+				int a = t.nextInt();
+				odakayit(a);
+			} else {
+				System.out.println("dort kisilik odaya kayit oldunuz");
+				odasayac[3]++;
+
+				setOdano(19);
+			}
+
+		}
+		if (odano == 20) {
+			if (odasayac[4] >= 4) {
+				System.out.println("bu oda kontejani doldurmus ");
+				odadoluluk();
+				System.out.println("bos odalardan birini seciniz");
+				int a = t.nextInt();
+				odakayit(a);
+			} else {
+				System.out.println("dort kisilik odaya kayit oldunuz");
+				odasayac[4]++;
+				setOdano(20);
+			}
+
+		}if(odano>=21||odano<=16) {
+			System.out.println("dort kisilikde boyle oda bulunmamaktadir");
+			System.out.println("tekrar oda seciniz");
+			int odasecimi=t.nextInt();
+			odakayit(odasecimi);
+				
+				
+			}
+
+	}
+
+}
+public class beskisilikoda implements odalar {
+
+	Scanner t = new Scanner(System.in);
+	private int yemekdrm;
+	static int kackisilik5 = 5;
+	private int Kacay;
+	private int odano;
+	private String ogrenciadi;
+	private String ogrencisoyad;
+	public static int odasayac[] = { 0, 0, 0, 0, 0 };
+
+	@Override
+	public int yemekucreti(int yemekdrm) {
+		switch (yemekdrm) {
+		case 1:
+			return 0;
+		case 2:
+			return 600;
+		default:
+			break;
+		}
+		return 0;
+
+	}
+
+	@Override
+	public int toplamuucretgoster() {
+		return (this.yemekucreti(this.yemekdrm) + 1100) * this.getKacay();
+	}
+
+	@Override
+	public void odabilgilerinigoster() {
+		System.out.println(" oda bilgileriniz =");
+
+		System.out.println("ogrenci ad soyad" + " " + getOgrenciadi() + " " + getOgrencisoyad());
+		System.out.println("oda numaraniz=" + getOdano());
+		System.out.println("toplam ucret=" + toplamuucretgoster());
+		if (getYemekdrm() == 2) {
+			System.out.println("yemekli durumu= yemekli");
+		} else
+			System.out.println("yemekli durumu = yemeksiz");
+		System.out.println("oda kapasitesi bes kisilik");
+
+	}
+
+	public int getYemekdrm() {
+		return yemekdrm;
+	}
+
+	public void setYemekdrm(int yemekdrm) {
+		if (yemekdrm == 1 || yemekdrm == 2) {
+			this.yemekdrm = yemekdrm;
+
+		}
+		if (yemekdrm > 2) {
+			System.out.println("yanlis rakam girdiniz 1 veya 2 olabilir");
+
+		}
+	}
+
+	public int getKacay() {
+		return Kacay;
+	}
+
+	public void setKacay(int kacay) {
+		this.Kacay = kacay;
+	}
+
+	public int getOdano() {
+		return odano;
+	}
+
+	public void setOdano(int odano) {
+		this.odano = odano;
+	}
+
+	public String getOgrenciadi() {
+		return ogrenciadi;
+	}
+
+	public void setOgrenciadi(String ogrenciadi) {
+		this.ogrenciadi = ogrenciadi;
+	}
+
+	public String getOgrencisoyad() {
+		return ogrencisoyad;
+	}
+
+	public void setOgrencisoyad(String ogrencisoyad) {
+		this.ogrencisoyad = ogrencisoyad;
+	}
+
+	@Override
+	public void odadoluluk() {
+
+		if (odasayac[0] >= 5) {
+			System.out.println("oda 21 dolmustur");
+		} else
+			System.out.println("oda 21 bostur");
+		if (odasayac[1] >= 5) {
+			System.out.println("oda 22 dolmustur");
+		} else {
+			System.out.println("oda  22 bostur");
+		}
+		if (odasayac[2] >= 5) {
+			System.out.println("oda 23 dolmustur");
+		} else {
+			System.out.println("oda  23 bostur");
+		}
+		if (odasayac[3] >= 5) {
+			System.out.println("oda 24 dolmustur");
+		} else {
+			System.out.println("oda  24 bostur");
+		}
+		if (odasayac[4] >= 5) {
+			System.out.println("oda 25 dolmustur");
+		} else {
+			System.out.println("oda  25 bostur");
+		}
+		if (odasayac[0] >= 5 && odasayac[1] >= 5 && odasayac[2] >= 5 && odasayac[3] >= 5 && odasayac[4] >= 5) {
+			System.out.println("bes kontejanlik tum odalar dolmustur baska kapasietli oda seciniz");
+			kackisilik5 = t.nextInt();
+		}
+	}
+
+	@Override
+	public void odakayit(int odano) {
+		if (odano == 21) {
+			if (odasayac[0] >= 5) {
+				System.out.println("bu oda kontejani doldurmus");
+				System.out.println("bos odalardan birini seciniz");
+				int a = t.nextInt();
+				odakayit(a);
+			}
+
+			else {
+				System.out.println(" bes kisilik odaya kayit oldunuz");
+				odasayac[0]++;
+
+				setOdano(1);
+			}
+
+		}
+		if (odano == 22) {
+			if (odasayac[1] >= 5) {
+				System.out.println("bu oda kontejani doldurmus ");
+				System.out.println("bos odalardan birini seciniz");
+				int a = t.nextInt();
+				odakayit(a);
+			} else {
+				System.out.println("bes kisilik odaya kayit oldunuz");
+				odasayac[1]++;
+
+				setOdano(22);
+
+			}
+
+		}
+
+		if (odano == 23) {
+			if (odasayac[2] >= 5) {
+				System.out.println("bu oda kontejani doldurmus ");
+				System.out.println("bos odalardan birini seciniz");
+				int a = t.nextInt();
+				odakayit(a);
+			} else {
+				System.out.println("bes kisilik odaya kayit oldunuz");
+				odasayac[2]++;
+
+				setOdano(23);
+			}
+
+		}
+		if (odano == 24) {
+			if (odasayac[3] >= 5) {
+				System.out.println("bu oda kontejani doldurmus ");
+				System.out.println("bos odalardan birini seciniz");
+				int a = t.nextInt();
+				odakayit(a);
+			} else {
+				System.out.println("bes kisilik odaya kayit oldunuz");
+				odasayac[3]++;
+
+				setOdano(24);
+			}
+
+		}
+		if (odano == 25) {
+			if (odasayac[4] >= 5) {
+				System.out.println("bu oda kontejani doldurmus ");
+				odadoluluk();
+				System.out.println("bos odalardan birini seciniz");
+				int a = t.nextInt();
+				odakayit(a);
+			} else {
+				System.out.println("bes kisilik odaya kayit oldunuz");
+				odasayac[4]++;
+				setOdano(25);
+			}
+
+		}
+		if (odano >= 26 || odano <= 21) {
+			System.out.println("bes kisilikde boyle oda bulunmamaktadir");
+			System.out.println("tekrar oda seciniz");
+			int odasecimi = t.nextInt();
+			odakayit(odasecimi);
+
+		}
+
+	}
+
+}import java.util.Scanner;
+
+public class altikisilikoda implements odalar {
+
+	Scanner t = new Scanner(System.in);
+	private int yemekdrm;
+	static int kackisilik6 = 6;
+	private int Kacay;
+	private int odano;
+	private String ogrenciadi;
+	private String ogrencisoyad;
+	public static int odasayac[] = { 0, 0, 0, 0, 0 };
+
+	@Override
+	public int yemekucreti(int yemekdrm) {
+		switch (yemekdrm) {
+		case 1:
+			return 0;
+		case 2:
+			return 600;
+		default:
+			break;
+		}
+		return 0;
+
+	}
+
+	@Override
+	public int toplamuucretgoster() {
+		return (this.yemekucreti(this.yemekdrm) + 1000) * this.getKacay();
+	}
+
+	@Override
+	public void odabilgilerinigoster() {
+		System.out.println(" oda bilgileriniz =");
+
+		System.out.println("ogrenci ad soyad" + " " + getOgrenciadi() + " " + getOgrencisoyad());
+		System.out.println("oda numaraniz=" + getOdano());
+		System.out.println("toplam ucret=" + toplamuucretgoster());
+		if (getYemekdrm() == 2) {
+			System.out.println("yemekli durumu= yemekli");
+		} else
+			System.out.println("yemekli durumu = yemeksiz");
+		System.out.println("oda kapasitesi alti kisilik");
+
+	}
+
+	public int getYemekdrm() {
+		return yemekdrm;
+	}
+
+	public void setYemekdrm(int yemekdrm) {
+		if (yemekdrm == 1 || yemekdrm == 2) {
+			this.yemekdrm = yemekdrm;
+
+		}
+		if (yemekdrm > 2) {
+			System.out.println("yanlis rakam girdiniz 1 veya 2 olabilir");
+
+		}
+	}
+
+	public int getKacay() {
+		return Kacay;
+	}
+
+	public void setKacay(int kacay) {
+		this.Kacay = kacay;
+	}
+
+	public int getOdano() {
+		return odano;
+	}
+
+	public void setOdano(int odano) {
+		this.odano = odano;
+	}
+
+	public String getOgrenciadi() {
+		return ogrenciadi;
+	}
+
+	public void setOgrenciadi(String ogrenciadi) {
+		this.ogrenciadi = ogrenciadi;
+	}
+
+	public String getOgrencisoyad() {
+		return ogrencisoyad;
+	}
+
+	public void setOgrencisoyad(String ogrencisoyad) {
+		this.ogrencisoyad = ogrencisoyad;
+	}
+
+	@Override
+	public void odadoluluk() {
+
+		if (odasayac[0] >= 6) {
+			System.out.println("oda 26 dolmustur");
+		} else
+			System.out.println("oda 26 bostur");
+		if (odasayac[1] >= 6) {
+			System.out.println("oda 27 dolmustur");
+		} else {
+			System.out.println("oda  27 bostur");
+		}
+		if (odasayac[2] >= 6) {
+			System.out.println("oda 28 dolmustur");
+		} else {
+			System.out.println("oda  28 bostur");
+		}
+		if (odasayac[3] >= 6) {
+			System.out.println("oda 29 dolmustur");
+		} else {
+			System.out.println("oda  29 bostur");
+		}
+		if (odasayac[4] >= 6) {
+			System.out.println("oda 30 dolmustur");
+		} else {
+			System.out.println("oda  30 bostur");
+		}
+		if (odasayac[0] >= 6 && odasayac[1] >= 6 && odasayac[2] >= 6 && odasayac[3] >= 6 && odasayac[4] >= 6) {
+			System.out.println("alti kontejanlik tum odalar dolmustur baska kapasietli oda seciniz");
+			kackisilik6 = t.nextInt();
+		}
+	}
+
+	@Override
+	public void odakayit(int odano) {
+		if (odano == 26) {
+			if (odasayac[0] >= 1) {
+				System.out.println("bu oda kontejani doldurmus");
+				System.out.println("bos odalardan birini seciniz");
+				int a = t.nextInt();
+				odakayit(a);
+			}
+
+			else {
+				System.out.println(" alti  kisilik odaya kayit oldunuz");
+				odasayac[0]++;
+
+				setOdano(26);
+			}
+
+		}
+		if (odano == 27) {
+			if (odasayac[1] >= 1) {
+				System.out.println("bu oda kontejani doldurmus ");
+				System.out.println("bos odalardan birini seciniz");
+				int a = t.nextInt();
+				odakayit(a);
+			} else {
+				System.out.println("alti  kisilik odaya kayit oldunuz");
+				odasayac[1]++;
+
+				setOdano(27);
+
+			}
+
+		}
+
+		if (odano == 28) {
+			if (odasayac[2] >= 1) {
+				System.out.println("bu oda kontejani doldurmus ");
+				System.out.println("bos odalardan birini seciniz");
+				int a = t.nextInt();
+				odakayit(a);
+			} else {
+				System.out.println("alti  kisilik odaya kayit oldunuz");
+				odasayac[2]++;
+
+				setOdano(28);
+			}
+
+		}
+		if (odano == 29) {
+			if (odasayac[3] >= 1) {
+				System.out.println("bu oda kontejani doldurmus ");
+				System.out.println("bos odalardan birini seciniz");
+				int a = t.nextInt();
+				odakayit(a);
+			} else {
+				System.out.println("alti  kisilik odaya kayit oldunuz");
+				odasayac[3]++;
+
+				setOdano(29);
+			}
+
+		}
+		if (odano == 30) {
+			if (odasayac[4] >= 1) {
+				System.out.println("bu oda kontejani doldurmus ");
+				odadoluluk();
+				System.out.println("bos odalardan birini seciniz");
+				int a = t.nextInt();
+				odakayit(a);
+			} else {
+				System.out.println("alti  kisilik odaya kayit oldunuz");
+				odasayac[4]++;
+				setOdano(30);
+			}
+
+		}
+		if (odano >= 30 || odano <= 26) {
+			System.out.println("alti kisilikde boyle oda bulunmamaktadir");
+			System.out.println("tekrar oda seciniz");
+			int odasecimi = t.nextInt();
+			odakayit(odasecimi);
+
+		}
+
+	}
+
+}
